@@ -1,3 +1,64 @@
 body {
   background: peachpuff;
 }
+
+.a, .b, .c, .d, .e, .f, .g, .h {
+  border: 1px solid teal;
+}
+
+.container, main, .rows, .row-one, .row-two {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.container {
+  height: 100vh;
+}
+
+.a {
+  min-width: 100%;
+  min-height: 15%;
+}
+
+main {
+  min-height: 85%;
+}
+
+.rows {
+  flex-direction: column;
+  min-height: 45%;
+}
+
+.h {
+  min-height: 55%;
+}
+
+.row-one, .row-two {
+  flex-direction: row;
+  min-height: 50%;
+}
+
+.b, .c, .d, .e, .f, .g {
+  min-width: 33.3%;
+}
+
+/* wide screen */
+@media (min-width: 600px) {
+  main {
+    flex-direction: row;
+    min-height: 70%;
+  }
+  .a {
+    min-height: 30%;
+  }
+  .rows, .h {
+    min-height: 100%;
+  }
+  .rows {
+    width: 75%;
+  }
+  .h {
+    width: 25%;
+  }
+}
