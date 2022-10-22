@@ -2,6 +2,81 @@ body {
     background: aliceblue;
 }
 
-div {
+.a, .b, .c, .d, .e, .container {
     border: 1px solid black;
+}
+
+.container, .middle-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    height: 100vh;
+}
+
+.container > *, .middle-row > * {
+    margin: 0.5em;
+}
+
+/* first container */
+.a {
+    min-height: 12%;
+}
+
+.middle-row {
+    min-height: 75%;
+}
+
+.e {
+    min-height: 5%;
+}
+
+/* Second Container */
+.d {
+    display: none;
+}
+
+.b {
+    min-height: 10%;
+}
+
+.c {
+    min-height: 85%;
+}
+
+.b, .c {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (min-width: 600px) {
+    /* first container */
+    .a {
+        min-height: 20%;
+    }
+    .middle-row {
+        min-height: 63%;
+    }
+    .e {
+        min-height: 10%;
+    }
+    /* second container */
+    .middle-row {
+        flex-direction: row;
+    }
+    .d {
+        display: block;
+        margin-left: 0.5em;
+    }
+    .b {
+        margin-right: 0.5em;
+    }
+    .c {
+        min-width: min-content;
+    }
+    .b, .d {
+        min-width: 23%;
+    }
 }
