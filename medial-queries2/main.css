@@ -1,3 +1,64 @@
 body {
   background: papayawhip;
 }
+
+.a, .b, .c, .d, .e, .f {
+  border: 1px solid black;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a {
+  min-width: 100%;
+  min-height: 20%;
+}
+
+main {
+  min-height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.b {
+  min-height: 60%;
+}
+
+.row {
+  min-height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.f {
+  min-height: 20%;
+}
+
+.c, .d, .e {
+  min-width: 33%;
+}
+
+/* wide screen */
+@media (min-width: 600px) {
+  .container {
+    flex-flow: row wrap;
+  }
+  main {
+    min-width: 66%;
+  }
+  .f {
+    min-width: 33%;
+  }
+  .b {
+    min-height: 50%;
+  }
+  .row {
+    min-height: 50%;
+  }
+}

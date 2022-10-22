@@ -1,3 +1,7 @@
 body {
     background: aliceblue;
 }
+
+div {
+    border: 1px solid black;
+}
